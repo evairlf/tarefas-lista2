@@ -24,6 +24,18 @@ function createNegative(c,l) {
    return matrix; 
 }
 
+function createNegativeAndNullVet(c) {
+    let matrix = [];
+    for(let i = 0; i < c ; i++){
+            if(Math.floor(Math.random()*c) === i){
+                matrix[i] = null;
+            }else{
+                matrix[i] = randomNumberNegativePositive();
+            }
+    }
+   return matrix; 
+}
+
 function createPositive(c,l) {
     let matrix = [];
     for(let i = 0; i < c ; i++){
@@ -52,4 +64,4 @@ function printMatrix(m) {
     }
 }
 
-module.exports = {createNegative, createPositive, createRealNumbers, printMatrix};
+module.exports = {createNegative, createPositive, createRealNumbers, printMatrix, createNegativeAndNullVet};
